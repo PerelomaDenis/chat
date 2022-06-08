@@ -36,7 +36,7 @@ export const customTheme = createTheme({
     MuiAutocomplete: {
       styleOverrides: {
         root: {
-          border: '1px solid rgba(255, 255, 255, 0.1)',
+          // border: '1px solid rgba(255, 255, 255, 0.1)',
           borderRadius: 3,
           '& .MuiInputAdornment-root': {
             color: '#8C939D',
@@ -62,6 +62,7 @@ export const customTheme = createTheme({
         },
         listbox: {
           backgroundColor: '#191F29',
+          padding: 0,
           '& .MuiAutocomplete-option': {
             padding: '16px 0',
           },
@@ -71,9 +72,53 @@ export const customTheme = createTheme({
           opacity: 0.7,
           margin: '0 16px',
           borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+          '&:last-child': {
+            borderBottom: 'none',
+          },
         },
         inputFocused: {
           color: '#FFFFFF',
+        },
+      },
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          // border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: 3,
+          label: {
+            color: '#8C939D',
+            fontSize: '0.875rem',
+            '&.Mui-focused, &.Mui-disabled, &.Mui-error': {
+              color: '#8C939D',
+            },
+            '&.MuiInputLabel-shrink': {
+              top: 15,
+              left: 2,
+            },
+          },
+          '& .MuiOutlinedInput-root': {
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: 3,
+          },
+          '& .MuiOutlinedInput-root.Mui-error': {
+            border: '1px solid #D24242',
+          },
+          input: {
+            color: '#FFFFFF',
+            fontSize: '0.875rem',
+            padding: '22px 16px 10px',
+          },
+          '& .Mui-disabled': {
+            background: '#1C2027',
+          },
+          '& .Mui-error .MuiOutlinedInput-notchedOutline': {
+            border: 'none',
+          },
+          '& .MuiFormHelperText-root.Mui-error': {
+            margin: 0,
+            fontSize: '0.6875rem',
+          },
         },
       },
     },
