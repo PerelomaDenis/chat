@@ -33,5 +33,49 @@ export const customTheme = createTheme({
         },
       },
     },
+    MuiAutocomplete: {
+      styleOverrides: {
+        root: {
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: 3,
+          '& .MuiInputAdornment-root': {
+            color: '#8C939D',
+          },
+          '&.Mui-focused .MuiInputAdornment-root': {
+            color: '#FFFFFF',
+          },
+        },
+        inputRoot: {
+          padding: '5px 20px',
+        },
+        input: {
+          color: '#8C939D',
+        },
+        clearIndicator: {
+          color: '#FFFFFF',
+        },
+        popupIndicator: {
+          display: 'none',
+        },
+        popper: {
+          borderRadius: 3,
+        },
+        listbox: {
+          backgroundColor: '#191F29',
+          '& .MuiAutocomplete-option': {
+            padding: '16px 0',
+          },
+        },
+        option: {
+          color: '#FFFFFF',
+          opacity: 0.7,
+          margin: '0 16px',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        },
+        inputFocused: {
+          color: '#FFFFFF',
+        },
+      },
+    },
   },
 });
