@@ -3,6 +3,7 @@ import * as React from 'react';
 import {
   Alert,
   Autocomplete,
+  Avatar,
   Box,
   Button,
   Checkbox,
@@ -15,6 +16,7 @@ import {
 
 import './App.css';
 import { CheckBox, CheckBoxChecked, CheckBoxError, Search } from './components/Icons';
+import { ProfileAvatar } from './components/Common/ProfileAvatar';
 
 declare module '@mui/material/Alert' {
   interface AlertPropsVariantOverrides {
@@ -101,6 +103,10 @@ const App: React.FC = () => {
         <Alert icon={false} color="error" variant="filledLarge">
           This is a error alert — check it out!
         </Alert>
+      </Box>
+      <Avatar />
+      <Box display="flex" justifyContent="center">
+        <ProfileAvatar />
       </Box>
     </div>
   );

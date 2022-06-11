@@ -184,5 +184,13 @@ export const customTheme = createTheme({
         }),
       },
     },
+    MuiAvatar: {
+      styleOverrides: {
+        root: {
+          color: '#AEB2B8',
+          backgroundColor: '#282F39',
+        },
+      },
+    },
   },
 });
