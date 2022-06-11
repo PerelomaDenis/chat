@@ -1,9 +1,18 @@
 import * as React from 'react';
 
-import { Autocomplete, Box, Button, InputAdornment, TextField } from '@mui/material';
+import {
+  Autocomplete,
+  Box,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  InputAdornment,
+  Radio,
+  TextField,
+} from '@mui/material';
 
 import './App.css';
-import { Search } from './components/Icons';
+import { CheckBox, CheckBoxChecked, CheckBoxError, Search } from './components/Icons';
 
 const App: React.FC = () => {
   const aaa = [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }];
@@ -45,6 +54,26 @@ const App: React.FC = () => {
       <TextField label="2222" value="222" disabled />
       <TextField label="2222" value="222" error />
       <TextField label="2222" value="" error helperText="ssss" />
+      <Box display="flex" justifyContent="center">
+        <FormControlLabel
+          control={<Checkbox checkedIcon={<CheckBoxChecked />} icon={<CheckBox />} />}
+          label="Label"
+        />
+        <FormControlLabel
+          control={
+            <Checkbox defaultChecked checkedIcon={<CheckBoxChecked />} icon={<CheckBox />} />
+          }
+          label="Label"
+        />
+        <FormControlLabel
+          control={<Checkbox checkedIcon={<CheckBoxChecked />} icon={<CheckBoxError />} />}
+          label="Label"
+        />
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <FormControlLabel control={<Radio />} label="Label" />
+        <FormControlLabel control={<Radio />} label="Label" />
+      </Box>
     </div>
   );
 };
