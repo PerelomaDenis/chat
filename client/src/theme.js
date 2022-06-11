@@ -14,6 +14,9 @@ export const customTheme = createTheme({
     error: {
       main: '#D24242',
     },
+    warning: {
+      main: '#CBB80E',
+    },
   },
   spacing: 8,
   components: {
@@ -126,6 +129,26 @@ export const customTheme = createTheme({
       styleOverrides: {
         root: {
           color: 'rgba(255, 255, 255, 0.2)',
+          '& .MuiSvgIcon-root': {
+            fontSize: '1.1rem',
+          },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: ({ ownerState, theme }) => ({
+          padding: '4px 8px',
+          height: theme.spacing(3),
+          borderRadius: 3,
+          color: theme.palette[ownerState.color].main,
+          backgroundColor:
+            (ownerState.color === 'success' && 'rgba(14, 203, 129, 0.1)') ||
+            (ownerState.color === 'warning' && 'rgba(203, 184, 14, 0.1)') ||
+            (ownerState.color === 'error' && 'rgba(235, 107, 107, 0.1)'),
+        }),
+        label: {
+          padding: 0,
         },
       },
     },

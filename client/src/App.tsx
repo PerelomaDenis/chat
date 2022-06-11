@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Checkbox,
+  Chip,
   FormControlLabel,
   InputAdornment,
   Radio,
@@ -73,6 +74,11 @@ const App: React.FC = () => {
       <Box display="flex" justifyContent="center">
         <FormControlLabel control={<Radio />} label="Label" />
         <FormControlLabel control={<Radio />} label="Label" />
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <Chip label="sss" color="success" />
+        <Chip label="sss" color="warning" />
+        <Chip label="sss" color="error" />
       </Box>
     </div>
   );
