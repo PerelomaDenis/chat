@@ -10,6 +10,7 @@ import {
   Chip,
   FormControlLabel,
   InputAdornment,
+  Pagination,
   Radio,
   TextField,
 } from '@mui/material';
@@ -112,6 +113,9 @@ const App: React.FC = () => {
       <Avatar />
       <Box display="flex" justifyContent="center">
         <ProfileAvatar />
+      </Box>
+      <Box display="flex" justifyContent="center">
+        <Pagination size="small" count={10} shape="rounded" />
       </Box>
       <Button onClick={handleOpen}>Open modal</Button>
       <Modal subText="dddd" image={<Addition />} open={open} onClose={handleClose} text="dsdsdsa" />

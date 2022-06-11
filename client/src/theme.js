@@ -221,5 +221,19 @@ export const customTheme = createTheme({
         },
       },
     },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          color: '#FFFFFF',
+          borderRadius: 3,
+          '&.Mui-selected': {
+            backgroundColor: '#282F39',
+          },
+          '&:hover': {
+            background: 'linear-gradient(270deg, #7164FF 0%, #682DFE 100%), #282F39;',
+          },
+        },
+      },
+    },
   },
 });
