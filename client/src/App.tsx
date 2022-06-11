@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import {
+  Alert,
   Autocomplete,
   Box,
   Button,
@@ -14,6 +15,13 @@ import {
 
 import './App.css';
 import { CheckBox, CheckBoxChecked, CheckBoxError, Search } from './components/Icons';
+
+declare module '@mui/material/Alert' {
+  interface AlertPropsVariantOverrides {
+    filledMedium: true;
+    filledLarge: true;
+  }
+}
 
 const App: React.FC = () => {
   const aaa = [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }];
@@ -79,6 +87,20 @@ const App: React.FC = () => {
         <Chip label="sss" color="success" />
         <Chip label="sss" color="warning" />
         <Chip label="sss" color="error" />
+      </Box>
+      <Box width={500} margin="0 auto">
+        <Alert icon={false} color="success" variant="filledMedium">
+          This is a success alert — check it out!
+        </Alert>
+        <Alert icon={false} color="error" variant="filledMedium">
+          This is a error alert — check it out!
+        </Alert>
+        <Alert icon={false} color="success" variant="filledLarge">
+          This is a success alert — check it out!
+        </Alert>
+        <Alert icon={false} color="error" variant="filledLarge">
+          This is a error alert — check it out!
+        </Alert>
       </Box>
     </div>
   );

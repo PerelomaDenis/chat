@@ -152,5 +152,37 @@ export const customTheme = createTheme({
         },
       },
     },
+    MuiAlert: {
+      variants: [
+        {
+          props: { variant: 'filledMedium' },
+          style: {
+            height: 40,
+          },
+        },
+        {
+          props: { variant: 'filledLarge' },
+          style: {
+            height: 48,
+          },
+        },
+      ],
+      styleOverrides: {
+        root: ({ ownerState, theme }) => ({
+          padding: '4px 8px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: theme.spacing(3),
+          borderRadius: 3,
+          color: theme.palette[ownerState.color].main,
+          border: `1px solid ${theme.palette[ownerState.color].main}`,
+          backgroundColor:
+            (ownerState.color === 'success' && 'rgba(14, 203, 129, 0.05)') ||
+            (ownerState.color === 'warning' && 'rgba(203, 184, 14, 0.05)') ||
+            (ownerState.color === 'error' && 'rgba(235, 107, 107, 0.05)'),
+        }),
+      },
+    },
   },
 });
