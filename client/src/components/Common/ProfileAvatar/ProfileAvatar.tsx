@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { ProfileAvatarProps } from './ProfileAvatar.types';
 import * as S from './ProfileAvatar.styles';
-import { Add, Delete } from '../../Icons';
+import { Add, Delete } from '../../Images';
 
 export const ProfileAvatar: React.FC<ProfileAvatarProps> = ({ img }) => {
   return (

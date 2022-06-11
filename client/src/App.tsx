@@ -15,8 +15,9 @@ import {
 } from '@mui/material';
 
 import './App.css';
-import { CheckBox, CheckBoxChecked, CheckBoxError, Search } from './components/Icons';
+import { Addition, CheckBox, CheckBoxChecked, CheckBoxError, Search } from './components/Images';
 import { ProfileAvatar } from './components/Common/ProfileAvatar';
+import { Modal } from './components/Common/Modal';
 
 declare module '@mui/material/Alert' {
   interface AlertPropsVariantOverrides {
@@ -27,6 +28,10 @@ declare module '@mui/material/Alert' {
 
 const App: React.FC = () => {
   const aaa = [{ name: '1' }, { name: '2' }, { name: '3' }, { name: '4' }];
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div className="App" style={{ backgroundColor: '#111823', height: '100vh' }}>
@@ -108,6 +113,8 @@ const App: React.FC = () => {
       <Box display="flex" justifyContent="center">
         <ProfileAvatar />
       </Box>
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal subText="dddd" image={<Addition />} open={open} onClose={handleClose} text="dsdsdsa" />
     </div>
   );
 };

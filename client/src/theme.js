@@ -192,5 +192,34 @@ export const customTheme = createTheme({
         },
       },
     },
+    MuiDialog: {
+      styleOverrides: {
+        paper: {
+          background: '#191F29',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: '0px 26px 32px -9px rgba(11, 13, 18, 0.6)',
+          borderRadius: '3px',
+          width: 284,
+        },
+      },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          display: 'flex',
+          justifyContent: 'flex-end',
+          padding: 16,
+          color: '#8C939D',
+        },
+      },
+    },
+    MuiDialogContent: {
+      styleOverrides: {
+        root: {
+          color: '#8C939D',
+          padding: '0 32px 32px',
+        },
+      },
+    },
   },
 });
