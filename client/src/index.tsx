@@ -7,13 +7,16 @@ import { ThemeProvider } from '@mui/material';
 import reportWebVitals from './reportWebVitals';
 import { customTheme } from './theme';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={customTheme}>
-      <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={customTheme}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
