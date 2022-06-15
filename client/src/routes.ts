@@ -1,4 +1,4 @@
-import { SignUp } from './components/SignUp';
+import { SignUp } from './components/Pages/SignUp';
 import { Test } from './components/Test';
 
 export const routes = [

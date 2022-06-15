@@ -33,6 +33,11 @@ export const customTheme = createTheme({
         },
         root: {
           color: '#FFFFFF',
+          textTransform: 'none',
+          '&.Mui-disabled': {
+            color: '#8C8C8C',
+            background: '#282B30',
+          },
         },
       },
     },
